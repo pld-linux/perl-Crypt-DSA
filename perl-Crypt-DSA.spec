@@ -1,7 +1,7 @@
-
+#
 # Conditional build
 %bcond_without	tests	# Do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	DSA
