@@ -1,3 +1,7 @@
+
+# Conditional build
+%bcond_without	tests	# Do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	DSA
@@ -10,11 +14,13 @@ License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7324f8d65f041b153b6b4beeaeb9a953
-BuildRequires:	perl-devel >= 5.6
+%if %{with tests}
 BuildRequires:	perl-Crypt-Random >= 0.33
 BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Math-Pari >= 2.001804
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-devel >= 5.6
 Requires:	perl-Crypt-Random >= 0.33
 Requires:	perl-Math-Pari >= 2.001804
 BuildArch:	noarch
@@ -49,6 +55,7 @@ plików z kluczami SSH2.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+%{?with_tests: %{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
