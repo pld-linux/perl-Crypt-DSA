@@ -21,7 +21,7 @@ BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Math-Pari >= 2.001804
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 Requires:	perl-Crypt-Random >= 0.33
 Requires:	perl-Math-Pari >= 2.001804
 BuildArch:	noarch
