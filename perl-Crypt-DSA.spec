@@ -3,8 +3,8 @@
 %bcond_without	tests	# Do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Crypt
-%define	pnam	DSA
+%define		pdir	Crypt
+%define		pnam	DSA
 Summary:	Crypt::DSA Perl module - DSA signature and key generation
 Summary(pl):	Modu³ Perla Crypt::DSA - generuj±cy sygnatury i klucze DSA
 Name:		perl-Crypt-DSA
