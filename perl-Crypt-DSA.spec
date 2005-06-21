@@ -18,6 +18,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 %if %{with tests}
 BuildRequires:	perl-Convert-PEM >= 0.07
 BuildRequires:	perl-Crypt-Random >= 0.33
+BuildRequires:  perl-Data-Buffer >= 0.01
 BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Math-Pari >= 2.001804
 %endif
