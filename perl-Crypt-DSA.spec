@@ -8,14 +8,15 @@
 Summary:	Crypt::DSA Perl module - DSA signature and key generation
 Summary(pl):	Modu³ Perla Crypt::DSA - generuj±cy sygnatury i klucze DSA
 Name:		perl-Crypt-DSA
-Version:	0.12
-Release:	4
+Version:	0.13
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7324f8d65f041b153b6b4beeaeb9a953
+# Source0-md5:	269261448ecc6b3b82a854e3b774c4ae
 %if %{with tests}
+BuildRequires:	perl-Convert-PEM >= 0.07
 BuildRequires:	perl-Crypt-Random >= 0.33
 BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Math-Pari >= 2.001804
