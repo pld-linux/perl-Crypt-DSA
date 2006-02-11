@@ -16,14 +16,14 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	269261448ecc6b3b82a854e3b774c4ae
 %if %{with tests}
-BuildRequires:	perl-Convert-PEM >= 0.07
 BuildRequires:	perl-Crypt-Random >= 0.33
-BuildRequires:  perl-Data-Buffer >= 0.01
+BuildRequires:	perl-Data-Buffer >= 0.01
 BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Math-Pari >= 2.001804
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-Convert-PEM >= 0.07
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Crypt-Random >= 0.33
 Requires:	perl-Math-Pari >= 2.001804
 BuildArch:	noarch
@@ -46,10 +46,10 @@ Crypt::DSA jest implementacj± systemu weryfikacji sygnatur DSA
 (Digital Signature Alghorithm). Sama implementacja jest w czystym
 Perlu, ale do ciê¿kiej matematyki korzysta z biblioteki Math::Pari.
 Pakiet umo¿liwia podpisywanie i weryfikacjê sygnatur DSA oraz
-generowanie kluczy. Modu³ ten wymaga dodatkowo modu³u Convert::PEM
-w wersji >= 0.04 do czytania i zapisywania plików zakodowanych PEM
-oraz modu³u Data::Buffer w wersji >= 0.01 do czytania i zapisywania
-plików z kluczami SSH2.
+generowanie kluczy. Modu³ ten wymaga dodatkowo modu³u Convert::PEM w
+wersji >= 0.04 do czytania i zapisywania plików zakodowanych PEM oraz
+modu³u Data::Buffer w wersji >= 0.01 do czytania i zapisywania plików
+z kluczami SSH2.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
