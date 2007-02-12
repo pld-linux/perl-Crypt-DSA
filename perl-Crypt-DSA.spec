@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	DSA
 Summary:	Crypt::DSA Perl module - DSA signature and key generation
-Summary(pl):	Modu≥ Perla Crypt::DSA - generuj±cy sygnatury i klucze DSA
+Summary(pl.UTF-8):   Modu≈Ç Perla Crypt::DSA - generujƒÖcy sygnatury i klucze DSA
 Name:		perl-Crypt-DSA
 Version:	0.14
 Release:	1
@@ -42,14 +42,14 @@ signature verification, and key generation. It additionally requires
 Convert::PEM >= 0.04 module to read/write PEM-encoded files and
 Data::Buffer >= 0.01 module to read/write SSH2 keyfiles.
 
-%description -l pl
-Crypt::DSA jest implementacj± systemu weryfikacji sygnatur DSA
+%description -l pl.UTF-8
+Crypt::DSA jest implementacjƒÖ systemu weryfikacji sygnatur DSA
 (Digital Signature Alghorithm). Sama implementacja jest w czystym
-Perlu, ale do ciÍøkiej matematyki korzysta z biblioteki Math::Pari.
-Pakiet umoøliwia podpisywanie i weryfikacjÍ sygnatur DSA oraz
-generowanie kluczy. Modu≥ ten wymaga dodatkowo modu≥u Convert::PEM w
-wersji >= 0.04 do czytania i zapisywania plikÛw zakodowanych PEM oraz
-modu≥u Data::Buffer w wersji >= 0.01 do czytania i zapisywania plikÛw
+Perlu, ale do ciƒô≈ºkiej matematyki korzysta z biblioteki Math::Pari.
+Pakiet umo≈ºliwia podpisywanie i weryfikacjƒô sygnatur DSA oraz
+generowanie kluczy. Modu≈Ç ten wymaga dodatkowo modu≈Çu Convert::PEM w
+wersji >= 0.04 do czytania i zapisywania plik√≥w zakodowanych PEM oraz
+modu≈Çu Data::Buffer w wersji >= 0.01 do czytania i zapisywania plik√≥w
 z kluczami SSH2.
 
 %prep
