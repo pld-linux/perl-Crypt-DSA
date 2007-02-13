@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	DSA
 Summary:	Crypt::DSA Perl module - DSA signature and key generation
-Summary(pl.UTF-8):   Moduł Perla Crypt::DSA - generujący sygnatury i klucze DSA
+Summary(pl.UTF-8):	Moduł Perla Crypt::DSA - generujący sygnatury i klucze DSA
 Name:		perl-Crypt-DSA
 Version:	0.14
 Release:	1
