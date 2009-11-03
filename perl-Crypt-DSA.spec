@@ -8,25 +8,26 @@
 Summary:	Crypt::DSA Perl module - DSA signature and key generation
 Summary(pl.UTF-8):	Moduł Perla Crypt::DSA - generujący sygnatury i klucze DSA
 Name:		perl-Crypt-DSA
-Version:	0.14
+Version:	1.16
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5ff5ab4be5501f5547bbe46cdc3de442
+# Source0-md5:	a099204d57043767fbe31d639eb43b03
 URL:		http://search.cpan.org/dist/Crypt-DSA/
 %if %{with tests}
-BuildRequires:	perl-Crypt-Random >= 0.33
 BuildRequires:	perl-Data-Buffer >= 0.01
 BuildRequires:	perl-Digest-SHA1
-BuildRequires:	perl-Math-Pari >= 2.001804
+BuildRequires:	perl-File-Which >= 0.05
+BuildRequires:	perl-Math-BigInt >= 1.78
+BuildRequires:	perl-Math-BigInt-GMP
 %endif
 BuildRequires:	perl-Convert-PEM >= 0.07
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl-Crypt-Random >= 0.33
-Requires:	perl-Math-Pari >= 2.001804
+Requires:	perl-File-Which >= 0.05
+Requires:	perl-Math-BigInt >= 1.78
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -72,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README ToDo
+%doc Changes README
 %{perl_vendorlib}/Crypt/DSA.pm
 %{perl_vendorlib}/Crypt/DSA
 %{_mandir}/man3/*
