@@ -7,24 +7,27 @@
 Summary:	Crypt::DSA Perl module - DSA signature and key generation
 Summary(pl.UTF-8):	Moduł Perla Crypt::DSA - generujący sygnatury i klucze DSA
 Name:		perl-Crypt-DSA
-Version:	1.17
-Release:	3
+Version:	1.24
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	0a64dcd77e796ebacad4c6af2df74b57
+Source0:	https://www.cpan.org/authors/id/T/TI/TIMLEGGE/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	8a476c07bf0dfc374dcfecbe18aef804
 URL:		http://search.cpan.org/dist/Crypt-DSA/
 %if %{with tests}
 BuildRequires:	perl-Data-Buffer >= 0.01
-BuildRequires:	perl-Digest-SHA1
+BuildRequires:	perl-Convert-ASN1
+BuildRequires:	perl-Crypt-DES_EDE3
+BuildRequires:	perl-Crypt-SysRandom
 BuildRequires:	perl-File-Which >= 0.05
 BuildRequires:	perl-Math-BigInt >= 1.78
 BuildRequires:	perl-Math-BigInt-GMP
 %endif
-BuildRequires:	perl-Convert-PEM >= 0.07
+BuildRequires:	perl-Convert-PEM >= 0.13
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-Convert-PEM >= 0.13
 Requires:	perl-File-Which >= 0.05
 Requires:	perl-Math-BigInt >= 1.78
 BuildArch:	noarch
